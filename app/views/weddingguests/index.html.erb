@@ -15,10 +15,10 @@
   <tbody>
     <% @weddingguests.each do |weddingguest| %>
       <tr>
-        <td><%= weddingguest.name %></td>
+        <td><%= link_to weddingguest.name, weddingguest %></td>
         <td><%= weddingguest.description %></td>
         <td><%= image_tag(weddingguest.picture_url) if weddingguest.picture.present? %></td>
-        <td><%= link_to 'Show', weddingguest %></td>
+        <td><%= link_to weddingguest.name, weddingguest %></td>
         <td><%= link_to 'Edit', edit_weddingguest_path(weddingguest) %></td>
         <td><%= link_to 'Destroy', weddingguest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
