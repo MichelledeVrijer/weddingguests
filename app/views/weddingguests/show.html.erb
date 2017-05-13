@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @weddingguest.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @weddingguest.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@weddingguest.picture_url) if @weddingguest.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_weddingguest_path(@weddingguest) %> |
+<%= link_to 'Back', weddingguests_path %>
